@@ -1,0 +1,125 @@
+body {
+  background: #bccadd;
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+.app-root {
+  display: flex;
+  min-height: 100vh;
+  transition: background 0.3s;
+}
+
+.analyzer-container {
+  width: 700px;
+  max-width: 700px;
+  min-width: 700px;
+  margin: 40px auto;
+  padding: 24px 24px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(60,60,90,0.10);
+  transition: margin-left 0.35s cubic-bezier(.4,0,.2,1), box-shadow 0.18s;
+  z-index: 1;
+}
+
+.sidebar-open .analyzer-container {
+  margin-left: 480px; /* 350px sidebar + 130px gap */
+  transition: margin-left 1.0s cubic-bezier(.4,0,.2,1);
+}
+
+@media (max-width: 900px) {
+  .sidebar-open .analyzer-container {
+    margin-left: 0;
+  }
+}
+
+.analyzer-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #24292f;
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+
+.analyzer-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.repo-input {
+  width: 350px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1.5px solid #d1d5da;
+  border-radius: 7px;
+  outline: none;
+  transition: border 0.2s;
+}
+.repo-input:focus {
+  border: 1.5px solid #0366d6;
+}
+
+.analyze-btn {
+  background: #0366d6;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.analyze-btn:hover {
+  background: #024fa2;
+}
+
+.section {
+  background: #f9fafb;
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  padding: 20px 18px;
+  box-shadow: 0 2px 6px rgba(60,60,90,0.04);
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #24292f;
+  margin-bottom: 10px;
+}
+
+.placeholder {
+  color: #8a939f;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.loading-placeholder {
+  color: #0366d6;
+  font-weight: 500;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.error-message {
+  color: #d73a49;
+  background: #fff0f0;
+  padding: 10px 16px;
+  border-radius: 7px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.backend-response {
+  color: #22863a;
+  background: #e6ffed;
+  padding: 10px 16px;
+  border-radius: 7px;
+  margin-bottom: 18px;
+  text-align: center;
+}
